@@ -12,9 +12,9 @@ class LengthStringProcessor : Processor {
      */
     override fun process(input: String): String =
         when(input.length) {
-            in 0..5 -> "short $input"
+            in 0..5 -> "mini $input"
             in 6..10 -> "medium $input"
             in 11..20 -> "long $input"
-            else -> input
+            else -> "very long $input"
         }
 }
