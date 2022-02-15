@@ -25,17 +25,4 @@ class WordReplaceStringProcessorTest {
         assertEquals(input, result)
     }
 
-    @Test
-    fun replace_string_single_occurrences() {
-        val input = "some string $STRING_TO_REPLACE"
-        val result = replaceProcessor.process(input)
-        assertEquals("some string $REPLACEMENT", result)
-    }
-
-    @Test
-    fun replace_string_multiple_occurrences() {
-        val input = "$STRING_TO_REPLACE some string $STRING_TO_REPLACE"
-        val result = replaceProcessor.process(input)
-        assertEquals("$REPLACEMENT some string $REPLACEMENT", result)
-    }
 }

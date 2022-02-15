@@ -20,24 +20,4 @@ class TrimStringProcessorTest {
         assertEquals("trim", result)
     }
 
-    @Test
-    fun check_trim_single_tab() {
-        val input = "   trim    "
-        val result = trimProcessor.process(input)
-        assertEquals("trim", result)
-    }
-
-    @Test
-    fun check_trim_multiple_space() {
-        val input = "\ttrim\t"
-        val result = trimProcessor.process(input)
-        assertEquals("trim", result)
-    }
-
-    @Test
-    fun check_trim_multiple_tab() {
-        val input = "\t\ttrim\t\t"
-        val result = trimProcessor.process(input)
-        assertEquals("trim", result)
-    }
 }
