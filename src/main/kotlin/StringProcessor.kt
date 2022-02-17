@@ -46,11 +46,11 @@ class StringProcessor {
      * @param processors array of processors to apply to the each input string
      * @return number of input strings affected by at least one processor
      */
-    fun process(inputs: Array<String?>, processors: Array<Processor>): Int {
+    fun process(inputs: Array<Int?>, processors: Array<Processor>): Int {
         var counter = 0
         for (i in inputs.indices) {
             val input = inputs[i]
-            inputs[i] = process(input, processors)
+            process("hello", processors)
             if (input != inputs[i]) {
                 counter++
             }
