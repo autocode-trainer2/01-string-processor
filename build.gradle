@@ -9,7 +9,6 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
@@ -17,15 +16,15 @@ dependencies {
     testImplementation 'io.mockk:mockk:1.10.5'
 }
 
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-    reports {
-        xml.required = true
-    }
+task testNG(type: Test) {
+    useTestNG()
 }
-
-test {
-    useJUnitPlatform()
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.enabled(true)
+        xml.destination file("${buildDir}/reports/xml/jacoco/jacocoTestReport.xml")
+    }
 }
 
 
