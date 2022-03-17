@@ -17,4 +17,14 @@ class LengthStringProcessor : Processor {
             in 11..20 -> "long $input"
             else -> "very long $input"
         }
+
+    // methods added for coverage calculating
+    override fun add(a: Int, b: Int) : Int {
+        return a + b
+    }
+
+    override fun multiply(a: Int, b: Int): Int {
+        return a * b
+    }
+
 }

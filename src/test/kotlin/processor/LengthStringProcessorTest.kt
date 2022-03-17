@@ -4,6 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
+
 class LengthStringProcessorTest {
 
     private lateinit var lengthProcessor: LengthStringProcessor
@@ -17,7 +18,7 @@ class LengthStringProcessorTest {
     fun process_short_string() {
         val shortString = "test"
         val result = lengthProcessor.process(shortString)
-        assertEquals("short $shortString", result)
+        assertEquals("mini $shortString", result)
     }
 
 }
